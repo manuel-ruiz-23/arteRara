@@ -1,0 +1,35 @@
+<body>
+    <h1 id="contador">0</h1>
+    <h4 id="tiempo">6</h4>
+    
+    <button onClick="masUno();">Click</button>
+        
+</body>
+<script>
+    var contador = document.getElementById("contador");
+    var tiempo = document.getElementById("tiempo");
+    var tiempoRestante = 6;
+    var clicks = 0;
+    var corriendo = false;
+
+    function inicio() {
+        corriendo = true;
+        clicks = 0;
+        tiempoRestante = 6;
+        tiempo.innerText = 6;
+        var cronometro = setInterval( () => {
+            tiempoRestante = tiempoRestante - 1;
+            tiempo.innerText = tiempoRestante
+            if(tiempoRestante < 1){
+                corriendo = false;
+                clearInterval(cronometro);
+            }
+        }, 1000);
+    }
+    
+    function masUno() {
+        if(!corriendo)inicio();
+        clicks = clicks + 1;
+        contador.innerText= clicks;
+    }
+</script>
