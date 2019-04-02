@@ -1,0 +1,63 @@
+<style>
+    #plantio {
+        position: relative;
+        width: 512;
+        height: 512;
+        background: brown; 
+    }
+    .brote {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: green;
+        animation: grow 2s;
+    }
+    
+    @keyframes grow {
+        0% {
+            transform: scale(0);
+        }
+        40% {
+            transform: scale(.5);
+        }
+        60% {
+            transform: scale(.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<div id="plantio">
+
+</div>
+
+<script>
+const plantio = document.getElementById("plantio");
+
+function brote(top, left){
+    let block = document.createElement("div");
+    block.setAttribute('class', 'brote');
+    block.style.top = top;
+    block.style.left = left;
+    return block;
+}
+
+for(let i = 32; i < 512; i += 64){
+    plantio.appendChild(brote(64, i));
+
+    plantio.appendChild(brote(128, i));
+
+    plantio.appendChild(brote(128 + 64, i));
+
+    plantio.appendChild(brote(256, i));
+
+    plantio.appendChild(brote(256 + 64, i));
+
+    plantio.appendChild(brote(256 + 128, i));
+
+    plantio.appendChild(brote(256 + 128 + 64, i));
+}
+
+</script>

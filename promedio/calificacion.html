@@ -1,0 +1,26 @@
+<body>
+matematicas<input type="number"/>
+<br>
+español <input type="number" />
+<br>
+historia <input type="number" />
+<br>
+<button onClick="calcula()">
+    calcular
+</button>
+</body>
+<script>
+
+function calcula(){
+    var total = 0;
+    var inputs = document.querySelectorAll('input');
+    console.log(inputs);
+    for(var i = 0; i < inputs.length;i++){
+        total += Number(inputs[i].value);
+        console.log(total);
+    }
+    alert(`tu promedio es de: ${total/inputs.length}`);
+}
+    
+
+</script>

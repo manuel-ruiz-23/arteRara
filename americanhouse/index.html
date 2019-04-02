@@ -1,0 +1,54 @@
+<style>
+    #fondo{
+        position: relative;
+        color: red;
+        height: 256;
+        width: 256;
+        background: red;
+    }
+    .block {
+        position: absolute;
+        height: 16;
+        width: 16;
+        background:blue;
+    }
+</style>
+<div id="fondo">
+    
+</div>
+
+<script>
+const screen = document.getElementById("fondo");
+
+for(let i = 128; i < 256 + 128; i += 32 + 64){
+    let block = createBlock(128, i);
+    screen.appendChild(block);
+    for(let j = i; j < 256; j += 32){
+        let column = createBlock(j,i);
+        screen.appendChild(column);
+    }
+}
+
+for(let i = 64; i < 256 + 64; i += 32 + 32){
+    let block = createBlock(64, i);
+    screen.appendChild(block);
+}
+
+for(let i = 32; i < 256 + 32; i += 32 + 16){
+    let block = createBlock(32, i);
+    screen.appendChild(block);
+}
+
+for(let i = 16; i < 256 + 16; i += 32 + 8){
+    let block = createBlock(16, i);
+    screen.appendChild(block); 
+}
+
+function createBlock(top, left){
+    let block = document.createElement("div");
+    block.setAttribute('class', 'block');
+    block.style.top = top;
+    block.style.left = left;
+    return block;
+}
+</script>

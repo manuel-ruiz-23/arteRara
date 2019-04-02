@@ -1,0 +1,45 @@
+<style>
+#cuadro {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: red;
+}
+</style>
+<body>
+    <div id="cuadro"></div>
+</body>
+<script>
+document.addEventListener("keydown", function(event) {
+    console.log(event.which);
+})
+//get cuadro
+const cuadro = document.getElementById('cuadro');
+console.log(cuadro);
+
+//move up 38
+document.addEventListener("keypress", function(event) {
+    if (event.keyCode == 38) {
+        alert('hi.')
+    }
+})
+//move down 40
+document.addEventListener("keydown", function(event) {
+    if (event.keyCode == 40) {
+        console.log('itryed');
+        cuadro.style.top = cuadro.style.top + 100;
+    }
+})
+//move right 37
+document.addEventListener("keypress", function(event) {
+    if (event.keyCode == 37) {
+        alert('hi.')
+    }
+})
+//move left 39
+document.addEventListener("keypress", function(event) {
+    if (event.keyCode == 39) {
+        alert('hi.')
+    }
+})
+</script>
