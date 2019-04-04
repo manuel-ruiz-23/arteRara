@@ -1,0 +1,42 @@
+
+body{
+    text-align: center;
+    background-size: cover;
+    background: url("http://blog.aulaformativa.com/wp-content/uploads/2016/06/fondos-de-pantalla-para-programadores-AndroidDevelopers.jpg");
+}
+
+.phone{
+    width: 300px;
+    height: 520px;
+    border-radius: 28px;
+    border: 6px solid black;
+    
+    position: relative;
+    font-family: 'Noto Serif SC', serif;
+    color: rgba(250, 244, 244, 0.98);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGiQrHliQyHW16MVFT5ZCMO6LltvH5I52zWDNPFbWf40QOpjSKyw") center;
+    background-size: cover;
+}
+
+.phone-app{
+    position: absolute;
+
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    
+    font-size: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight:100;
+
+}
