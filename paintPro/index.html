@@ -1,0 +1,53 @@
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Web Paint!
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+        <div class="paleta">
+         <input type="number" value="20" id="hex" placeholder="enter hex color"></input>
+         <div class="color rojo" onclick="setColor('#d12411')"></div>
+         <div class="color verde" onclick="setColor('#8cd615')"></div>
+         <div class="color azul" onclick="setColor('#139cbe')"></div>
+         <div class="color cafe" onclick="setColor('#614228')"></div>
+         <div class="color amarillo" onclick="setColor('#dacf39')"></div>
+         <div class="color morado" onclick="setColor('#591797')"></div>
+        </div>
+        <canvas id="draw"></canvas>
+    
+        <script src="app.js"></script>
+    </body>
+    <style>
+        .paleta {
+            display: flex;
+        }
+        .color {
+            margin: 2px;
+            height: 32px;
+            width: 32px;
+        }
+        .rojo {
+            background-color: #d12411;
+        }
+        .verde {
+            background-color: #8cd615;
+        }
+        .azul {
+            background-color: #139cbe;
+        }
+        .cafe {
+            background-color: #614228;
+        }
+        .amarillo {
+            background-color: #dacf39;
+        }
+        .morado {
+            background-color: #591797;
+        }
+    </style>
+</html>
